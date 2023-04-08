@@ -1,4 +1,4 @@
-import { Hero, Navbar } from '@/components'
+import { Gallery, Hero, Instagram, Navbar } from '@/components'
 import Head from 'next/head'
 
 export default function Home() {
@@ -10,6 +10,8 @@ export default function Home() {
 
       <Navbar />
       <Hero title='Captur Photography' message='I capture moments and keep them alive.' />
+      <Gallery />
+      <Instagram />
     </>
   )
 }

@@ -24,41 +24,41 @@ const Navbar = () => {
   }, [])
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-[3] duration-300 ${navbarTheme}`}>
+    <header className={`fixed top-0 left-0 w-full z-[3] duration-300 ease-in ${navbarTheme}`}>
       <div className={`max-w-[1240px] px-4 h-[90px] flex items-center justify-between mx-auto`}>
-        <Link href="/" className={`z-10 ${toggle ? 'text-white' : ''}`} onClick={() => setToggle(prev => false)}>
-          <h1 className="text-4xl font-bold">
+
+        <h2 className={`z-10 ${toggle ? 'text-white' : null}`}>
+          <Link href="/" onClick={() => setToggle(prev => false)}>
             Captur
-          </h1>
-        </Link>
+          </Link>
+        </h2>
 
         <ul className="hidden md:flex items-center gap-4">
           {navLinks.map(({ id, label, link }) => (
-            <li>
+            <li key={id} className="font-semibold">
               <Link
-                key={id}
                 href={link}
-                onClick={() => setToggle(prev => !prev)}
-                className="font-semibold">
+                onClick={() => setToggle(prev => false)}
+              >
                 {label}
               </Link>
             </li>
           ))}
         </ul>
 
-        <button className={`block md:hidden z-10 ${toggle ? 'text-white' : ''}`} onClick={() => setToggle(prev => !prev)}>
+        <button className={`block md:hidden z-10 ${toggle ? 'text-white' : null}`} onClick={() => setToggle(prev => !prev)}>
           {toggle ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
         </button>
 
         <div className={toggle ? 'menu-mobile left-0' : 'menu-mobile left-[-100%]'}>
           <ul className="flex md:hidden flex-col gap-4">
             {navLinks.map(({ id, label, link }) => (
-              <li className='text-4xl hover:text-gray-500 duration-300'>
+              <li key={id} >
                 <Link
-                  key={id}
                   href={link}
                   onClick={() => setToggle(prev => !prev)}
-                  className="font-semibold">
+                  className='text-4xl hover:text-gray-500 duration-300 font-semibold'
+                >
                   {label}
                 </Link>
               </li>
