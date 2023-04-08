@@ -19,9 +19,9 @@ const Gallery = () => {
 
   return (
     <section id="gallery" className="max-w-[1240px] mx-auto">
-      <h2 className="text-2xl font-bold text-center p-4">
+      <h3 className="text-center">
         Gallery
-      </h2>
+      </h3>
 
       <div className="relative flex justify-center p-4 max-h-[700px] min-h-[300px]">
 

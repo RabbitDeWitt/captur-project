@@ -17,6 +17,10 @@
    @apply text-4xl font-bold
  }
 
+ h3 {
+   @apply text-2xl font-bold p-4
+ }
+
  .menu-mobile {
    @apply absolute top-0 h-screen w-full bg-black text-white justify-center items-center flex text-center ease-in duration-300
  }
