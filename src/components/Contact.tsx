@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <section className="max-w-[1240px] mx-auto p-4 h-screen">
-      <h3 className="text-center">Let`&apos;`s work together</h3>
+      <h3 className="text-center">Let&apos;s work together</h3>
       <form className="max-w-[600px] m-auto">
         <div className="grid grid-cols-2 gap-2">
           <input className="border shadow-lg p-3" type="text" placeholder="Name" />
